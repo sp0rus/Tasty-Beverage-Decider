@@ -34,34 +34,14 @@ public class ChooseDrink
         int chai = 14;
         int herbal = 15;
         int noClueTea = 16;
-        
+
         Scanner console = new Scanner( System.in );
-        System.out.println();
-        System.out.println();
-        System.out.println( "    ******      *****     ***************" );
-        System.out.println( "   *    **     *   **    *             **" );
-        System.out.println( "  *    * *    *   * *   *             * *" );
-        System.out.println( " *    *  *   *   *  *  *             *  *" );
-        System.out.println( "******   *  ******  * ***************  *" );
-        System.out.println( "******   *  ******  * *************** *" );
-        System.out.println( "******   *  ******  * ****************" );
-        System.out.println( "******   *  ******  *    ********  *" );
-        System.out.println( "******************  *    ********  *" );
-        System.out.println( "******************  *    ********  *" );
-        System.out.println( "******************  *    ********  *" );
-        System.out.println( "******   * *******  *    ********  ****" );
-        System.out.println( "******  *  *******  *    ******** *   *" );
-        System.out.println( "****** *   ******* *  ************** *" );
-        System.out.println( "*******    ********   ***************" );
-        System.out.println( "******     *******    **************" );
-        System.out.println();
-        System.out.println();
         System.out.println( "This program will decide what you should drink using mind reading :)");
         System.out.print( "Do you wish to continue [yes or no]?");
         String response = console.nextLine();
         System.out.println( "Hold on while the computer attempts to read your mind and see what you really want to drink...");
         System.out.println();
-        
+
         try
         {
             Thread.sleep( 3000 );
@@ -75,7 +55,7 @@ public class ChooseDrink
         {
             Random generator = new Random ();
             int typeOfDrink = generator.nextInt(3);
-        
+
             if ( typeOfDrink == coffee )
             {
                 System.out.println( "The program thinks you should drink some coffee." );
@@ -83,10 +63,10 @@ public class ChooseDrink
             else if (typeOfDrink == tea )
             {
                 System.out.println( "The program thinks you should drink some Tea" );
-            
+
                 Random generator2 = new Random ();
                 int typeOfTea = generator2.nextInt(7) + 10;
-            
+
                 if ( typeOfTea == green )
                 {
                     System.out.println( "The decision of the type is *drumroll* Green Tea!" );
