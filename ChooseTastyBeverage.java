@@ -20,7 +20,7 @@ b+++ DI+++ D++ G+ e h r++ y
 import java.util.Random;
 import java.util.Scanner;
 
-public class ChooseDrink
+public class ChooseTastyBeverage
 {
     public static void main( String [] args )
     {
