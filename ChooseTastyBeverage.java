@@ -25,17 +25,9 @@ public class ChooseTastyBeverage
         System.out.println( "This program will decide what you should drink using mind reading :)");
         System.out.print( "Do you wish to continue [yes or no]? ");
         String response = console.nextLine();
-        System.out.println( "Hold on while the computer attempts to read your mind and see what you really want to drink...");
-        System.out.println();
-
-        try
-        {
-            Thread.sleep( 3000 );
-        }
-        catch ( InterruptedException e )
-        {
-        System.out.println( "awakened prematurely" );
-        }
+        System.out.println( "Hold on while the computer attempts to read your mind \n"
+			  + "and see what you really want to drink...\n");
+        sleep();
 
         while (response.equals("yes"))
         {
@@ -79,16 +71,19 @@ public class ChooseTastyBeverage
                 }
                 else if ( typeOfTea == noClueTea )
                 {
-                System.out.println( "Your mind was blocked, and I was unable to see what you really wanted, so you can try again (and maybe end up with coffee!) or you can man up and make your own decisions.");
+                System.out.println( "Your mind was blocked, and I was unable to see \n"
+				  + "what tea really wanted, so you can try again \n"
+				  + "(and maybe end up with coffee!) or you can man\n"
+				  + "up and make your own decisions.\n");
                 }
             }
             else if ( typeOfDrink == noClueDrink )
             {
-                System.out.println( "I couldn't read your mind, try again later or read your own mind you lazy bum." );
+                System.out.println( "I couldn't read your mind, try again later or read your own mind you lazy bum.\n" );
             }
-            System.out.println();
             System.out.print( "Hope you got your answer, if not, do you care to try again [yes or no]? " );
             response = console.nextLine();
+	    System.out.println();
         }
         System.out.println();
         System.out.println( "Enjoy your tasty beverage!" );
@@ -97,6 +92,16 @@ public class ChooseTastyBeverage
 	System.out.println("The drink that you subconsciouly desire is " + drink);
     }
     private static void printTea(String tea){
-	System.out.println("...and the type you are craving is " + tea + " tea.");
+	System.out.println("...and the type you are craving is " + tea + " tea.\n");
+    }
+    private static void sleep(){
+	try
+        {
+            Thread.sleep( 3000 );
+        }
+        catch ( InterruptedException e )
+        {
+        System.out.println( "awakened prematurely" );
+        }
     }
 }
