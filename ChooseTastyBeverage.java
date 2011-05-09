@@ -23,7 +23,7 @@ public class ChooseTastyBeverage
 
         Scanner console = new Scanner( System.in );
         System.out.println( "This program will decide what you should drink using mind reading :)");
-        System.out.print( "Do you wish to continue [yes or no]?");
+        System.out.print( "Do you wish to continue [yes or no]? ");
         String response = console.nextLine();
         System.out.println( "Hold on while the computer attempts to read your mind and see what you really want to drink...");
         System.out.println();
@@ -44,53 +44,59 @@ public class ChooseTastyBeverage
 
             if ( typeOfDrink == coffee )
             {
-                System.out.println( "The program thinks you should drink some coffee." );
+		printDrink("Coffee");
             }
             else if (typeOfDrink == tea )
             {
-                System.out.println( "The program thinks you should drink some Tea" );
+                printDrink("Tea");
 
                 Random generator2 = new Random ();
                 int typeOfTea = generator2.nextInt(7) + 10;
 
                 if ( typeOfTea == green )
                 {
-                    System.out.println( "The decision of the type is *drumroll* Green Tea!" );
+                    printTea("green");
                 }
                 else if ( typeOfTea == black )
                 {
-                    System.out.println( "The decision of the type is *drumroll* Black Tea!" );
+                    printTea("black");
                 }
                 else if ( typeOfTea == white )
                 {
-                    System.out.println( "The decision of the type is *drumroll* White Tea!" );
+                    printTea("white");
                 }
                 else if ( typeOfTea == rooibos )
                 {
-                    System.out.println( "The decision of the type is *drumroll* Rooibos Tea!" );
+                    printTea("rooibos");
                 }
                 else if ( typeOfTea == chai )
                 {
-                    System.out.println( "The decision of the type is *drumroll* Chai Tea!" );
+                    printTea("chai");
                 }
                 else if ( typeOfTea == herbal )
                 {
-                    System.out.println( "The decision of the type is *drumroll* Herbal Tea!" );
+                    printTea("herbal");
                 }
                 else if ( typeOfTea == noClueTea )
                 {
-                System.out.println( "The program couldn't decide what type of tea you really want to drink, so you can try again (and maybe end up with coffee!) or you can man up and make your own decisions :P");
+                System.out.println( "Your mind was blocked, and I was unable to see what you really wanted, so you can try again (and maybe end up with coffee!) or you can man up and make your own decisions.");
                 }
             }
             else if ( typeOfDrink == noClueDrink )
             {
-                System.out.println( "The program couldn't read your mind, try again later or read your own mind you lazy bum" );
+                System.out.println( "I couldn't read your mind, try again later or read your own mind you lazy bum." );
             }
             System.out.println();
-            System.out.print( "Hope you got your answer, if not, do you care to try again [yes or no]?" );
+            System.out.print( "Hope you got your answer, if not, do you care to try again [yes or no]? " );
             response = console.nextLine();
         }
         System.out.println();
-        System.out.println( "Hope this helped :)" );
+        System.out.println( "Enjoy your tasty beverage!" );
+    }
+    private static void printDrink(String drink){
+	System.out.println("The drink that you subconsciouly desire is " + drink);
+    }
+    private static void printTea(String tea){
+	System.out.println("...and the type you are craving is " + tea + " tea.");
     }
 }
