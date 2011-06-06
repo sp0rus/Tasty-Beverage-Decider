@@ -8,18 +8,18 @@ import java.util.Scanner;
 
 public class ChooseTastyBeverage
 {
-    public static void main( String [] args )
+    public static void main( final String [] args )
     {
-        int coffee = 0;
-        int tea = 1;
-        int noClueDrink = 2;
-        int green = 10;
-        int black= 11;
-        int white = 12;
-        int rooibos = 13;
-        int chai = 14;
-        int herbal = 15;
-        int noClueTea = 16;
+        final int coffee = 0;
+        final int tea = 1;
+        final int noClueDrink = 2;
+        final int green = 10;
+        final int black= 11;
+        final int white = 12;
+        final int rooibos = 13;
+        final int chai = 14;
+        final int herbal = 15;
+        final int noClueTea = 16;
 
         Scanner console = new Scanner( System.in );
         System.out.println( "This program will decide what you should drink using mind reading :)");
