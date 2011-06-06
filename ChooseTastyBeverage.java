@@ -10,17 +10,6 @@ public class ChooseTastyBeverage
 {
     public static void main( final String [] args )
     {
-        final int coffee = 0;
-        final int tea = 1;
-        final int noClueDrink = 2;
-        final int green = 10;
-        final int black= 11;
-        final int white = 12;
-        final int rooibos = 13;
-        final int chai = 14;
-        final int herbal = 15;
-        final int noClueTea = 16;
-
         Scanner console = new Scanner( System.in );
         System.out.println( "This program will decide what you should drink using mind reading :)");
         System.out.print( "Do you wish to continue [yes or no]? ");
@@ -28,18 +17,30 @@ public class ChooseTastyBeverage
         System.out.println( "Hold on while the computer attempts to read your mind \n"
 			  + "and see what you really want to drink...\n");
         sleep();
-
+        
         while (response.equals("yes"))
         {
+        	final int coffee = 0;
+            final int tea = 1;
+            final int noClueDrink = 2;
+            
             Random generator = new Random ();
             int typeOfDrink = generator.nextInt(3);
 
             if ( typeOfDrink == coffee )
             {
-		printDrink("Coffee");
+            	printDrink("Coffee");
             }
             else if (typeOfDrink == tea )
             {
+            	final int green = 10;
+                final int black= 11;
+                final int white = 12;
+                final int rooibos = 13;
+                final int chai = 14;
+                final int herbal = 15;
+                final int noClueTea = 16;
+                
                 printDrink("Tea");
 
                 Random generator2 = new Random ();
