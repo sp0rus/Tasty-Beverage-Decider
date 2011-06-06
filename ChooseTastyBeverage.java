@@ -18,13 +18,14 @@ public class ChooseTastyBeverage
 			  + "and see what you really want to drink...\n");
         sleep();
         
+        Random generator = new Random ();
+        Random generator2 = new Random ();
         while (response.equals("yes"))
         {
         	final int coffee = 0;
             final int tea = 1;
             final int noClueDrink = 2;
             
-            Random generator = new Random ();
             int typeOfDrink = generator.nextInt(3);
 
             if ( typeOfDrink == coffee )
@@ -43,7 +44,6 @@ public class ChooseTastyBeverage
                 
                 printDrink("Tea");
 
-                Random generator2 = new Random ();
                 int typeOfTea = generator2.nextInt(7) + 10;
 
                 if ( typeOfTea == green )
